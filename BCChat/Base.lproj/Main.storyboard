@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H4c-Zv-urp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="jX7-yC-NQ3">
+            <objects>
+                <viewController id="H4c-Zv-urp" customClass="LoginViewController" customModule="BCChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t70-BC-mkT"/>
+                        <viewControllerLayoutGuide type="bottom" id="gpg-1g-glM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bun-ou-IKX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="KhK-Bg-Acg">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbt-if-eCo">
+                                <rect key="frame" x="37" y="234" width="300" height="200"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ebw-1M-ssb">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GF-yY-coO">
+                                            <rect key="frame" x="32" y="72" width="236" height="56"/>
+                                            <color key="backgroundColor" red="0.17647058823529413" green="0.26666666666666666" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                            <state key="normal" title="Log In with Facebook">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="loginWithFacebook:" destination="H4c-Zv-urp" eventType="touchUpInside" id="bQY-bm-HtT"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3GF-yY-coO" firstAttribute="leading" secondItem="ebw-1M-ssb" secondAttribute="leading" constant="32" id="G6U-Ef-Jhe"/>
+                                        <constraint firstAttribute="bottom" secondItem="3GF-yY-coO" secondAttribute="bottom" constant="72" id="MMb-pJ-0BC"/>
+                                        <constraint firstItem="3GF-yY-coO" firstAttribute="centerY" secondItem="ebw-1M-ssb" secondAttribute="centerY" id="UfS-Gd-ZQJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="3GF-yY-coO" secondAttribute="trailing" constant="32" id="lDp-qe-AW9"/>
+                                        <constraint firstItem="3GF-yY-coO" firstAttribute="top" secondItem="ebw-1M-ssb" secondAttribute="top" constant="72" id="oky-gP-RCT"/>
+                                        <constraint firstItem="3GF-yY-coO" firstAttribute="centerX" secondItem="ebw-1M-ssb" secondAttribute="centerX" id="pDf-iK-Ggc"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="QU5-yy-7ep"/>
+                                    <constraint firstAttribute="height" constant="200" id="iyT-Vm-bf1"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KhK-Bg-Acg" firstAttribute="top" secondItem="t70-BC-mkT" secondAttribute="bottom" constant="-20" id="4oI-G3-wrU"/>
+                            <constraint firstItem="cbt-if-eCo" firstAttribute="centerX" secondItem="bun-ou-IKX" secondAttribute="centerX" id="7Oa-9l-mX2"/>
+                            <constraint firstItem="gpg-1g-glM" firstAttribute="top" secondItem="KhK-Bg-Acg" secondAttribute="bottom" id="B2c-hP-AfO"/>
+                            <constraint firstItem="cbt-if-eCo" firstAttribute="centerY" secondItem="bun-ou-IKX" secondAttribute="centerY" id="CVl-Bp-G93"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KhK-Bg-Acg" secondAttribute="trailing" constant="-20" id="OKb-FX-ZGG"/>
+                            <constraint firstItem="KhK-Bg-Acg" firstAttribute="centerY" secondItem="bun-ou-IKX" secondAttribute="centerY" id="aA2-LE-KDn"/>
+                            <constraint firstItem="KhK-Bg-Acg" firstAttribute="centerX" secondItem="bun-ou-IKX" secondAttribute="centerX" id="hOL-K8-8l5"/>
+                            <constraint firstItem="KhK-Bg-Acg" firstAttribute="leading" secondItem="bun-ou-IKX" secondAttribute="leadingMargin" constant="-20" id="vAz-jm-Teh"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="facebookButton" destination="3GF-yY-coO" id="tvL-Gn-4MV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qej-nt-aeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259.5" y="321.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.png" width="1500" height="2121"/>
+    </resources>
+</document>
